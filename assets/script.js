@@ -1,3 +1,7 @@
+
+
+
+
 const teamMembers = [
   {
     name: "Marco Bianchi",
@@ -37,7 +41,38 @@ const teamMembers = [
   }
 ];
 
+ const formEl = document.querySelector('form')
 let rowEl = document.querySelector('.row')
+
+function generateNewMember(member){
+  const {img, email, role, name} = member
+  return `
+  <div class=" col-sm-12 col-md-6 col-lg-4">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                          <div class="col-md-4 bg-dark">
+                            <img
+                              src="${img}"
+                              alt="Trendy Pants and Shoes"
+                              class="img-fluid rounded-start"
+                            />
+                          </div>
+                          <div class="col-md-8 bg-dark text-white">
+                            <div class="card-body ">
+                              <h5 class="card-title">${name}</h5>
+                             <p class="card-text">
+                                ${role}
+                              </p>
+                              <a class="text-decoration-none" href="">${email}</a>
+                      
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
+                </div>
+  
+  `
+}
 
 for (let i = 0; i < teamMembers.length; i++){
   let teamMember = teamMembers[i]
@@ -70,8 +105,26 @@ for (let i = 0; i < teamMembers.length; i++){
                 
   
   `
+
+  
 rowEl.innerHTML += markup
 
 }
 
 
+
+formEl.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let name = document.getElementById('name').value
+  let role = document.getElementById('role').value
+  let image = document.getElementById('img').value
+
+let email = document.getElementById('email').value
+
+const member = {name, role, image, email}
+console.log(member);
+const markup = generateNewMember(member)
+console.log(markup);
+
+rowEl.insertAdjacentHTML('beforeend', markup)
+})
