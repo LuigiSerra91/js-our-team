@@ -36,3 +36,10 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+let rowEl = document.querySelector('.row')
+
+for (let i = 0; i < teamMembers.length; i++){
+  let teamMember = teamMembers[i]
+  let { name, role, email, img} = teamMember
+}
