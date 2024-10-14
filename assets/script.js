@@ -48,7 +48,7 @@ function generateNewMember(member){
   const {img, email, role, name} = member
   return `
   <div class=" col-sm-12 col-md-6 col-lg-4">
-                    <div class="card mb-3">
+                    <div class="card mb-3 border-warning">
                         <div class="row g-0">
                           <div class="col-md-4 bg-dark">
                             <img
@@ -79,7 +79,7 @@ for (let i = 0; i < teamMembers.length; i++){
   let { name, role, email, img} = teamMember
   let markup = `
   <div class=" col-sm-12 col-md-6 col-lg-4">
-                    <div class="card mb-3">
+                    <div class="card mb-3 border-warning">
                         <div class="row g-0">
                           <div class="col-md-4 bg-dark">
                             <img
