@@ -59,9 +59,7 @@ for (let i = 0; i < teamMembers.length; i++){
                              <p class="card-text">
                                 ${role}
                               </p>
-                              <p class="card-text">
-                                ${email}
-                              </p>
+                              <a class="text-decoration-none" href="">${email}</a>
                       
                             </div>
                           </div>
