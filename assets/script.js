@@ -42,7 +42,7 @@ const teamMembers = [
 ];
 
  const formEl = document.querySelector('form')
-let rowEl = document.querySelector('.row')
+ let rowEl = document.querySelector('.row')
 
 function generateNewMember(member){
   const {img, email, role, name} = member
