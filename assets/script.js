@@ -43,18 +43,18 @@ for (let i = 0; i < teamMembers.length; i++){
   let teamMember = teamMembers[i]
   let { name, role, email, img} = teamMember
   let markup = `
-  <div class="col-4">
-                    <div class="card mb-3" style="max-width: 540px;">
+  <div class=" col-sm-12 col-md-6 col-lg-4">
+                    <div class="card mb-3">
                         <div class="row g-0">
-                          <div class="col-md-4">
+                          <div class="col-md-4 bg-dark">
                             <img
                               src="${img}"
                               alt="Trendy Pants and Shoes"
                               class="img-fluid rounded-start"
                             />
                           </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
+                          <div class="col-md-8 bg-dark text-white">
+                            <div class="card-body ">
                               <h5 class="card-title">${name}</h5>
                              <p class="card-text">
                                 ${role}
